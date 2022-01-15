@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import { useWeatherContext } from "./context/WeatherContextProvider";
+import { Form } from "./components/Form/Form";
+import { Weather } from "./components/Weather/Weather";
+import { Map } from "./components/Map/Map";
 
 function App() {
+  const { weather } = useWeatherContext();
+
+  const [showElement, setShowElement] = useState(false);
+  useEffect(() => {
+    setTimeout(function () {
+      setShowElement(true);
+    }, 15000);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Form /> */}
+
+      {showElement ? weather && <Weather /> : <></>}
+
+      {/* {weather && <Weather />} */}
+
+      {weather && <Map />}
     </div>
   );
 }
