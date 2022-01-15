@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Karolina-Prezent/static/css/main.60052445.css",
+    "main.js": "/Karolina-Prezent/static/js/main.9a96c0b5.js",
+    "index.html": "/Karolina-Prezent/index.html",
+    "main.60052445.css.map": "/Karolina-Prezent/static/css/main.60052445.css.map",
+    "main.9a96c0b5.js.map": "/Karolina-Prezent/static/js/main.9a96c0b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60052445.css",
+    "static/js/main.9a96c0b5.js"
+  ]
+}
